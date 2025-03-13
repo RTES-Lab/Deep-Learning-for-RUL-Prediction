@@ -5,6 +5,7 @@
 ## 목차
 - [개요](#개요)
 - [데이터셋](#데이터셋)
+- [데이터 전처리](#데이터-전처리)
 - [모델 설명](#모델-설명)
 - [설치 방법](#설치-방법)
 - [사용 방법](#사용-방법)
@@ -21,6 +22,15 @@
 CMAPSS 데이터셋은 NASA에서 제공하는 항공 엔진 데이터셋으로, 시뮬레이션된 엔진의 다양한 센서 측정값을 포함하고 있습니다. 데이터셋은 정상 상태에서 시작해 성능이 저하되어 최종적으로 고장나는 엔진의 시계열 데이터를 담고 있습니다.
 
 링크: https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data
+
+## 데이터 전처리
+모델 성능 향상을 위해 데이터에 다음과 같은 전처리를 적용했습니다:
+
+- **Feature Selection**: low-variance feature인 센서 1, 5, 6, 10, 16, 18, 19번 제거
+- **Z-score normalization**: 데이터 정규화(평균=0, 표준편차=1)
+- **Exponentially Weighted Moving Average (EWMA)**: 데이터 노이즈 감소 및 추세 강조(필터 강도 α=0.1)
+- **Piece-wise RUL**: 실제 운영 환경과 유사하도록 RUL 초기를 125로 고정
+
 
 ## 모델 설명
 
@@ -149,3 +159,8 @@ PyTorch-Transformer-for-RUL-Prediction/
 ├── main.py                  # 메인 실행 파일
 └── requirements.txt         # 필요한 패키지 목록
 ```
+
+## 결과 예시
+
+<img src="https://github.com/user-attachments/assets/eb487cde-9704-4db7-88f4-a06ddd2601bc" width="500">
+
