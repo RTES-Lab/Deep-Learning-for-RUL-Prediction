@@ -1,6 +1,6 @@
-# Deep Learning 기반 CMAPSS 데이터셋 RUL 예측
+# Deep Learning 모델 기반 시계열 데이터 RUL 예측
 
-이 프로젝트는 NASA의 CMAPSS(Commercial Modular Aero-Propulsion System Simulation) 데이터셋을 사용하여 항공 엔진의 잔여 유효 수명(RUL, Remaining Useful Life)을 예측하는 딥러닝 모델을 구현한 것입니다. 현재 LSTM, BiLSTM, TCN(Temporal Convolutional Network)과 Transformer 모델이 구현되어 있습니다.
+이 프로젝트는 NASA의 CMAPSS(Commercial Modular Aero-Propulsion System Simulation) 데이터셋을 사용하여 항공 엔진의 잔여 유효 수명(RUL, Remaining Useful Life)을 예측하는 딥러닝 모델을 구현한 것입니다. TCN(Temporal Convolutional Network), LSTM, BiLSTM과 Transformer 모델을 구현했습니다.
 
 ## 목차
 - [개요](#개요)
@@ -13,7 +13,7 @@
   
 ## 개요
 
-예측 유지보수(Predictive Maintenance)는 산업 자산의 상태를 모니터링하고 고장이 발생하기 전에 유지보수가 필요한 시점을 예측하는 기술입니다. 이 프로젝트에서는 시계열 데이터를 활용하여 항공 엔진의 잔여 유효 수명(RUL)을 예측하는 다양한 딥러닝 모델을 구현하고 비교합니다.
+예측 유지보수(Predictive Maintenance)는 산업 자산의 상태를 모니터링하고 고장이 발생하기 전에 유지보수가 필요한 시점을 예측하는 기술입니다. 시계열 데이터를 활용하여 항공 엔진의 잔여 유효 수명(RUL)을 예측하는 다양한 딥러닝 모델을 구현합니다.
 
 
 ## 데이터셋
